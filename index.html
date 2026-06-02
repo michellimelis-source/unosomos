@@ -103,21 +103,21 @@ button,input,select,textarea{font-family:var(--ff-b);border:none;outline:none;cu
 .hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(135deg,rgba(28,15,10,.84) 0%,rgba(28,15,10,.65) 45%,rgba(28,15,10,.3) 100%)}
 .hero-content{position:relative;z-index:3;flex:1;display:flex;align-items:center;padding-top:72px}
 .hero-inner{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:60px;padding:80px 0 100px}
-.hero-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(245,197,24,.15);border:1.5px solid var(--dorado);border-radius:100px;padding:8px 18px;margin-bottom:28px}
-.hero-badge span{font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--dorado)}
-.hero-badge-dot{width:8px;height:8px;border-radius:50%;background:var(--dorado);animation:pulse 2s infinite;flex-shrink:0}
+.hero-badge{display:inline-flex;align-items:center;gap:12px;margin-bottom:28px}
+.hero-badge span{font-family:"Barlow Condensed","Montserrat ExtraBold",sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--coral)}
+.hero-badge-dot{display:block;width:28px;height:1.5px;background:var(--coral);flex-shrink:0}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
 .hero-logo-block{display:flex;align-items:center;gap:18px;margin-bottom:24px}
 .hero-logo-img{width:90px;height:90px;object-fit:contain;filter:drop-shadow(0 4px 16px rgba(245,197,24,.3))}
-.hero-brand-name{font-family:var(--ff-h);font-weight:700;font-size:clamp(2.8rem,4vw,3.8rem);color:var(--blanco);letter-spacing:.04em;line-height:.9}
-.hero-brand-sub{font-family:var(--ff-h);font-weight:400;font-style:italic;font-size:clamp(.9rem,1.4vw,1.15rem);color:var(--dorado);letter-spacing:.14em;text-transform:uppercase;margin-top:6px}
+.hero-brand-name{font-family:var(--ff-h);font-weight:700;font-size:clamp(2.8rem,4vw,3.8rem);color:var(--beige);letter-spacing:.04em;line-height:.9}
+.hero-brand-sub{font-family:"Barlow Condensed","Montserrat ExtraBold",sans-serif;font-weight:600;font-style:normal;font-size:clamp(.6rem,1vw,.75rem);color:var(--coral);letter-spacing:.26em;text-transform:uppercase;margin-top:4px}
 .hero-h1{font-family:var(--ff-h);font-weight:600;font-size:clamp(1.6rem,2.8vw,2.4rem);line-height:1.15;color:var(--blanco);margin-bottom:20px}
-.hero-h1 em{font-style:italic;color:var(--dorado)}
+.hero-h1 em{font-style:normal;color:var(--dorado)}
 .hero-tagline{font-size:1rem;color:rgba(243,233,221,.82);line-height:1.75;max-width:480px;margin-bottom:36px}
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:48px}
 .hero-stats{display:flex;gap:32px;padding-top:24px;border-top:1px solid rgba(255,255,255,.15)}
 .hero-stat-num{font-family:var(--ff-h);font-size:2.2rem;font-weight:700;color:var(--dorado);line-height:1}
-.hero-stat-label{font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(243,233,221,.55);margin-top:4px}
+.hero-stat-label{font-family:"Barlow Condensed",sans-serif;font-size:.65rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(243,233,221,.45);margin-top:4px}
 .hero-right{position:relative;display:flex;align-items:center;justify-content:center}
 .hero-video-card{background:rgba(28,15,10,.6);border:2px solid rgba(245,197,24,.5);border-radius:12px;overflow:hidden;box-shadow:8px 8px 0 rgba(245,197,24,.25);width:100%;max-width:520px}
 .hero-video-card iframe{width:100%;aspect-ratio:16/9;display:block}
@@ -352,8 +352,8 @@ button,input,select,textarea{font-family:var(--ff-b);border:none;outline:none;cu
 .up-card p{font-size:.84rem;color:rgba(243,233,221,.58);line-height:1.6}
 
 /* CTA FINAL */
-.cta-img-wrap{position:relative;height:480px;overflow:hidden}
-.cta-img-wrap img{width:100%;height:100%;object-fit:cover}
+.cta-img-wrap{position:relative;height:650px;overflow:hidden}
+.cta-img-wrap img{width:100%;height:100%;object-fit:cover;object-position:center 5%}
 .cta-img-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(28,15,10,.93) 0%,rgba(28,15,10,.7) 50%,rgba(28,15,10,.38) 100%)}
 .cta-img-content{position:absolute;inset:0;display:flex;align-items:center;z-index:2}
 .cta-inner{max-width:620px}
@@ -405,6 +405,7 @@ button,input,select,textarea{font-family:var(--ff-b);border:none;outline:none;cu
   .pvision-cards{grid-template-columns:1fr}
 }
 em{font-family:"Georgia",Georgia,serif;}
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap");
 </style>
 </head>
 <body>
@@ -464,6 +465,7 @@ em{font-family:"Georgia",Georgia,serif;}
           <div class="hero-badge fi">
             <span class="hero-badge-dot"></span>
             <span>Plataforma tecnológica de abastecimiento comunitario</span>
+            <span class="hero-badge-dot"></span>
           </div>
           <div class="hero-logo-block fi d1">
             <img src="logo.png" alt="UNOSOMOS" class="hero-logo-img">
@@ -986,12 +988,11 @@ em{font-family:"Georgia",Georgia,serif;}
     <div class="equipo-grid">
       <div class="equipo-card fi d1">
         <div class="equipo-card-top">
-          <div class="equipo-iniciales">MM</div>
           <div class="equipo-nombre">Michelli Melis Torrejón</div>
           <div class="equipo-rol">Fundadora · Coordinación General y Red de Embajadores</div>
         </div>
         <div class="equipo-card-body">
-          <p class="equipo-exp">Psicóloga clínica con más de 20 años en desarrollo comunitario y liderazgo social a nivel nacional. Representante legal de UNOSOMOS SpA. Diseñó de forma autodidacta la identidad visual completa del proyecto y construyó la red territorial como relatora en la Escuela de Liderazgo Comunitario de Pudahuel 2025. Los vínculos que hoy sostienen las 9 cartas de apoyo nacieron de ese trabajo previo. Fundadora de Vesica Consultores.</p>
+          <p class="equipo-exp">Psicóloga clínica con más de 20 años en desarrollo comunitario y liderazgo social a nivel nacional. Representante legal de UNOSOMOS SpA. Diseñó de forma autodidacta la identidad visual completa del proyecto y construyó la red territorial como relatora en la Escuela de Liderazgo Comunitario de Pudahuel 2025.</p>
           <div class="equipo-tags">
             <span class="equipo-tag">Psicología comunitaria</span>
             <span class="equipo-tag">Liderazgo territorial</span>
@@ -1002,12 +1003,11 @@ em{font-family:"Georgia",Georgia,serif;}
       </div>
       <div class="equipo-card fi d2">
         <div class="equipo-card-top">
-          <div class="equipo-iniciales">MaM</div>
           <div class="equipo-nombre">Marcos Melis Torrejón</div>
           <div class="equipo-rol">Cofundador · Comercial y Operaciones</div>
         </div>
         <div class="equipo-card-body">
-          <p class="equipo-exp">Ejecutivo con más de 30 años en gestión comercial, dirección de operaciones y desarrollo de alianzas B2B. Fundador de ProGarage EIRL, con productos activos internacionalmente bajo la marca Piston. Aporta profundo conocimiento en plataformas digitales de comercialización, desarrollo de productos y gestión de equipos multidisciplinarios. Lidera la relación con proveedores y el escalamiento de la red comercial.</p>
+          <p class="equipo-exp">Ejecutivo con más de 30 años en gestión comercial, dirección de operaciones y desarrollo de alianzas B2B. Fundador de ProGarage EIRL, con productos activos internacionalmente bajo la marca Piston. Aporta profundo conocimiento en plataformas digitales de comercialización, desarrollo de productos y gestión de equipos multidisciplinarios.</p>
           <div class="equipo-tags">
             <span class="equipo-tag">Gestión B2B</span>
             <span class="equipo-tag">Plataformas digitales</span>
@@ -1018,12 +1018,11 @@ em{font-family:"Georgia",Georgia,serif;}
       </div>
       <div class="equipo-card fi d3">
         <div class="equipo-card-top">
-          <div class="equipo-iniciales">LJ</div>
           <div class="equipo-nombre">Leonardo Jiménez Cabrera</div>
           <div class="equipo-rol">Cofundador · Territorio y Logística</div>
         </div>
         <div class="equipo-card-body">
-          <p class="equipo-exp">Más de 18 años en gestión de obras públicas y privadas y supervisión de equipos técnicos en terreno. Instalador SEC Clase B con más de 240 declaraciones eléctricas. Creador del canal audiovisual "Vecinos del Mundo" — activo más de un año — con contenido comunitario, artístico y territorial que evidencia su vinculación directa con comunidades reales. Aporta liderazgo operativo y capacidad de ejecución en terreno.</p>
+          <p class="equipo-exp">Más de 18 años en gestión de obras públicas y privadas y supervisión de equipos técnicos en terreno. Instalador SEC Clase B con más de 240 declaraciones eléctricas. Creador del canal audiovisual "Vecinos del Mundo"  con contenido comunitario, artístico y territorial que evidencia su vinculación directa con comunidades reales.</p>
           <div class="equipo-tags">
             <span class="equipo-tag">Gestión de obras</span>
             <span class="equipo-tag">Operaciones terreno</span>
@@ -1256,7 +1255,7 @@ function createNetwork(canvas, opts) {
   var nodeCount     = opts.nodeCount     || 28;
   var speed         = opts.speed         || 0.35;
   var maxDist       = opts.maxDist       || 150;
-  var palette       = opts.palette       || ['#D4B896','#A67C52','#FEFAF6','#8B6347'];
+  var palette       = opts.palette       || ['#F5C518','#E8A020','#F0E6D0','#C87941'];
   var nodeMinR      = opts.nodeMinR      || 2.5;
   var nodeMaxR      = opts.nodeMaxR      || 6.5;
   var pulseSpeed    = opts.pulseSpeed    || 0.018;
@@ -1400,7 +1399,7 @@ function createNetwork(canvas, opts) {
     if (heroNet) {
       createNetwork(heroNet, {
         nodeCount: 24, speed: 0.25, maxDist: 220,
-        palette: ['#D4B896','#C8A87A','#FEFAF6','#8B6347'],
+        palette: ['#F5C518','#E8A020','#F0E6D0','#C87941'],
         nodeMinR: 2, nodeMaxR: 5.5, pulseSpeed: 0.014,
         lineOpacity: 0.2, particleCount: 5, glow: true,
       });
@@ -1410,7 +1409,7 @@ function createNetwork(canvas, opts) {
     if (mainNet) {
       createNetwork(mainNet, {
         nodeCount: 38, speed: 0.4, maxDist: 145,
-        palette: ['#A67C52','#D4B896','#FEFAF6','#C8A87A','#8B6347'],
+        palette: ['#F5C518','#E8A020','#F0E6D0','#C87941','#E8A020'],
         nodeMinR: 3, nodeMaxR: 8, pulseSpeed: 0.022,
         lineOpacity: 0.45, particleCount: 10, glow: true,
       });
@@ -1420,7 +1419,7 @@ function createNetwork(canvas, opts) {
     if (valNet) {
       createNetwork(valNet, {
         nodeCount: 30, speed: 0.32, maxDist: 160,
-        palette: ['#D4B896','#A67C52','#FEFAF6','#8B6347'],
+        palette: ['#F5C518','#E8A020','#F0E6D0','#C87941'],
         nodeMinR: 2.5, nodeMaxR: 6.5, pulseSpeed: 0.016,
         lineOpacity: 0.35, particleCount: 7, glow: true,
       });
@@ -1430,7 +1429,7 @@ function createNetwork(canvas, opts) {
     if (ctaNet) {
       createNetwork(ctaNet, {
         nodeCount: 45, speed: 0.48, maxDist: 175,
-        palette: ['#C8A87A','#D4B896','#FEFAF6','#A67C52','#8B6347'],
+        palette: ['#F5C518','#E8A020','#F0E6D0','#C87941','#E8A020'],
         nodeMinR: 3, nodeMaxR: 9, pulseSpeed: 0.024,
         lineOpacity: 0.32, particleCount: 12, glow: true,
       });
