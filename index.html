@@ -180,7 +180,7 @@ button,input,select,textarea{font-family:var(--ff-b);border:none;outline:none;cu
 .traz-sub{font-size:.88rem;color:rgba(243,233,221,.55);margin-bottom:36px}
 .traz-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0}
 .traz-step{text-align:center;position:relative}
-.traz-step:not(:last-child)::after{content:'';position:absolute;top:19px;right:-50%;width:100%;height:2px;background:linear-gradient(90deg,var(--dorado),var(--coral));z-index:0}
+.traz-step:not(:last-child)::after{content:'';position:absolute;top:19px;left:50%;width:100%;height:2px;background:linear-gradient(90deg,var(--dorado),var(--coral));z-index:0}
 .traz-num{width:38px;height:38px;border-radius:50%;background:var(--coral);border:2px solid var(--dorado);display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700;color:var(--blanco);margin:0 auto 10px;position:relative;z-index:1}
 .traz-step.done .traz-num{background:var(--dorado);color:var(--negro)}
 .traz-label{font-size:.7rem;color:rgba(243,233,221,.65);line-height:1.4;padding:0 4px}
@@ -385,7 +385,7 @@ button,input,select,textarea{font-family:var(--ff-b);border:none;outline:none;cu
   .ahora-grid,.orgs-grid{grid-template-columns:1fr 1fr}
   .footer-grid{grid-template-columns:1fr 1fr}
   .ods-inner{flex-direction:column;text-align:center}
-  .hero-right{display:none}
+  .hero-right{display:flex;margin-top:32px}
   .problema-img,.problema-quote{display:none}
   .encuesta-wrap{grid-template-columns:1fr}
   .nav-links,.nav-ctas{display:none}
@@ -393,6 +393,10 @@ button,input,select,textarea{font-family:var(--ff-b);border:none;outline:none;cu
   .escala-datos{grid-template-columns:repeat(3,1fr)}
 }
 @media(max-width:640px){
+  .hero-badge span{font-size:.55rem;letter-spacing:.12em}
+  .hero-badge-dot{width:16px}
+  .nodos-grid{grid-template-columns:1fr!important}
+
   .wrap{padding:0 20px}
   .pasos-grid,.razones-grid,.equipo-grid,.ahora-grid,.orgs-grid,.val-numeros,.escala-datos{grid-template-columns:1fr}
   .traz-steps{grid-template-columns:repeat(2,1fr);gap:18px}
@@ -403,6 +407,24 @@ button,input,select,textarea{font-family:var(--ff-b);border:none;outline:none;cu
   .perfiles-tabs{flex-wrap:wrap;width:100%}
   .perfil-tab{border-right:none;border-bottom:var(--borde);flex:1;text-align:center}
   .pvision-cards{grid-template-columns:1fr}
+}
+
+@media(max-width:768px){
+  .hero-video-wrap{background:url('torres_paine.png') center/cover no-repeat}
+  .hero-video-wrap iframe{display:none}
+  .hero-video-overlay-block{display:none}
+  .hero-inner{grid-template-columns:1fr;padding:40px 0 60px}
+  .hero-logo-block{flex-direction:column;align-items:flex-start;gap:10px}
+  .hero-logo-img{width:60px;height:60px}
+  .hero-brand-name{font-size:2.2rem}
+  .hero-badge{flex-wrap:wrap}
+  .hero-badge span{font-size:.58rem;letter-spacing:.1em}
+  .hero-badge-dot{width:16px}
+  .hero-stats{flex-wrap:wrap;gap:16px}
+  .hero-stat{min-width:calc(50% - 10px)}
+  .hero-tagline{font-size:.9rem}
+  .nodos-grid{grid-template-columns:1fr!important;max-width:100%!important}
+  .hero-right{display:flex!important;margin-top:0}
 }
 em{font-family:"Georgia",Georgia,serif;}
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap");
@@ -453,7 +475,8 @@ em{font-family:"Georgia",Georgia,serif;}
 <!-- HERO -->
 <section id="hero">
   <div class="hero-video-wrap">
-    <iframe src="https://www.youtube.com/embed/BQLJr_16sHg?autoplay=1&mute=1&loop=1&playlist=BQLJr_16sHg&controls=0&showinfo=0&rel=0&modestbranding=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none;border:none;" title="UNOSOMOS"></iframe>
+    <div style="position:absolute;inset:0;z-index:3;pointer-events:none;background:transparent"></div>
+    <iframe src="https://www.youtube.com/embed/BQLJr_16sHg?autoplay=1&mute=1&loop=1&playlist=BQLJr_16sHg&controls=0&showinfo=0&rel=0&modestbranding=1&disablekb=1&iv_load_policy=3&fs=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none;border:none;" title="UNOSOMOS"></iframe>
     <div style="position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(to top,#1C0F0A,transparent);z-index:2"></div>
   </div>
   <div class="hero-overlay"></div>
@@ -538,7 +561,7 @@ em{font-family:"Georgia",Georgia,serif;}
           </div>
         </div>
         <div class="frase-dna fi d3">
-          <p>"La empresa no es solo lo que hacemos juntos. Es también <em>quiénes nos volvemos al hacerlo.</em>"</p>
+          <p>"Colaborar no es solo lo que hacemos juntos. Es también <em>quiénes nos volvemos al hacerlo.</em>"</p>
         </div>
         <div class="fi d4">
           <div class="ods-badge">
@@ -564,7 +587,7 @@ em{font-family:"Georgia",Georgia,serif;}
     <p class="fi d2" style="font-size:1rem;color:rgba(243,233,221,.65);line-height:1.82;max-width:600px;margin:0 auto 40px">
       UNOSOMOS conecta barrios, coordinadores y proveedores en una infraestructura digital que crece con cada nodo que se activa. El poder colectivo se multiplica con cada vecino que se suma.
     </p>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:780px;margin:0 auto" class="fi d3">
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:780px;margin:0 auto" class="fi d3 nodos-grid">
       <div style="padding:28px 20px;border:1.5px solid rgba(245,197,24,.25);border-radius:10px;background:rgba(243,233,221,.05)">
         <div style="font-family:var(--ff-h);font-size:2.8rem;font-weight:700;color:var(--dorado);line-height:1">Vecinos</div>
         <div style="font-size:.78rem;color:rgba(243,233,221,.5);margin-top:8px;letter-spacing:.08em;text-transform:uppercase">Demanda colectiva</div>
@@ -932,7 +955,7 @@ em{font-family:"Georgia",Georgia,serif;}
         <div class="ahora-num">02</div>
         <div class="ahora-icon">📱</div>
         <h3>Madurez digital</h3>
-        <p>La penetración de smartphones y pagos digitales en Chile supera el 80%, reduciendo las barreras de adopción ógica y haciendo posible la coordinación a escala comunitaria.</p>
+        <p>La penetración de smartphones y pagos digitales en Chile supera el 80%, reduciendo las barreras de adopción tecnológica y haciendo posible la coordinación a escala comunitaria.</p>
       </div>
       <div class="ahora-card fi d3">
         <div class="ahora-num">03</div>
@@ -983,7 +1006,7 @@ em{font-family:"Georgia",Georgia,serif;}
     <div style="text-align:center;max-width:620px;margin:0 auto">
       <div class="eyebrow fi" style="justify-content:center">Quiénes lo construyen</div>
       <h2 class="sec-h fi d1">Un equipo con<br><em>raíz territorial.</em></h2>
-      <p class="sec-sub fi d2" style="margin:0 auto">Tres fundadores con capacidades probadas antes de UNOSOMOS, construidas en comunidades, territorios y mercados reales de Chile.</p>
+      <p class="sec-sub fi d2" style="margin:0 auto">Tres fundadores con capacidades probadas antes de UNOSOMOS, construidas en barrios, territorios y mercados reales de Chile.</p>
     </div>
     <div class="equipo-grid">
       <div class="equipo-card fi d1">
@@ -1022,7 +1045,7 @@ em{font-family:"Georgia",Georgia,serif;}
           <div class="equipo-rol">Cofundador · Territorio y Logística</div>
         </div>
         <div class="equipo-card-body">
-          <p class="equipo-exp">Más de 18 años en gestión de obras públicas y privadas y supervisión de equipos técnicos en terreno. Instalador SEC Clase B con más de 240 declaraciones eléctricas. Creador del canal audiovisual "Vecinos del Mundo"  con contenido comunitario, artístico y territorial que evidencia su vinculación directa con comunidades reales.</p>
+          <p class="equipo-exp">Más de 18 años en gestión de obras públicas y privadas y supervisión de equipos técnicos en terreno. Instalador SEC Clase B con más de 240 declaraciones eléctricas. Creador del canal audiovisual "Vecinos del Mundo"  con contenido comunitario, artístico y territorial que evidencia su vinculación directa con barrios reales.</p>
           <div class="equipo-tags">
             <span class="equipo-tag">Gestión de obras</span>
             <span class="equipo-tag">Operaciones terreno</span>
@@ -1161,7 +1184,7 @@ em{font-family:"Georgia",Georgia,serif;}
             <span class="logo-tag" style="color:var(--coral)">Red que Une y Ahorra</span>
           </div>
         </div>
-        <p>Plataforma abastecimiento comunitario. Conectamos barrios organizados con proveedores mediante infraestructura digital y Embajadores habilitados que operan desde su propio territorio.</p>
+        <p>Plataforma de abastecimiento comunitario. Conectamos barrios organizados con proveedores mediante infraestructura digital y Embajadores habilitados que operan desde su propio territorio.</p>
         <p style="margin-top:12px;font-size:.76rem;color:rgba(243,233,221,.28)">UNOSOMOS SpA · RUT 78.431.958-K</p>
       </div>
       <div class="footer-col">
